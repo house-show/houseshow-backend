@@ -7,15 +7,15 @@ import { AuthDto } from './dto/auth.dto';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post('test')
-  async test(@Body() dto: AuthDto) {
+  @Post('signup')
+  async signup(@Body() dto: AuthDto) {
     console.log(dto, 'dto');
-    return this.authService.test();
+    return this.authService.signup(dto);
   }
 
-  // @Post('login')
-  // async login(@Body() loginDto: LoginDto) {
-  //   const token = await this.authService.login(loginDto);
-  //   return { token };
-  // }
+  @Post('signin')
+  async signin(@Body() loginDto: AuthDto) {
+    const token = await this.authService.signin(loginDto);
+    return { token };
+  }
 }

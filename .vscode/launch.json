@@ -1,11 +1,11 @@
 {
   "configurations": [
     {
-      "command": "npm run dev",
-      "name": "Run npm dev",
+      "command": "yarn start:dev",
+      "name": "Start dev",
       "request": "launch",
       "type": "node-terminal",
-      "cwd": "/Users/orabazu/Workspaces/workspace-gopuff/puffin-catalog/app/service/catalog-web-app/src/main"
+      "cwd": "/Users/orabazu/Workspaces/workspace-orabazu/homeshow-api"
     }
   ]
 }
