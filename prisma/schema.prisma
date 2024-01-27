@@ -39,7 +39,7 @@ model UserTask {
   userId      Int
   taskId      Int
   dueDate     DateTime
-  status      String // Consider using an enum for predefined statuses
+  status      String
   assignedAt  DateTime  @default(now())
   completedAt DateTime?
   user        User      @relation(fields: [userId], references: [id])
@@ -50,7 +50,7 @@ model SpecialCard {
   id          Int        @id @default(autoincrement())
   name        String
   description String?
-  frequency   String // Consider using an enum for predefined frequencies
+  frequency   String
   userCards   UserCard[]
 }
 
